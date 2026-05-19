@@ -63,19 +63,20 @@ LLM-as-judge scoring is also provided in both reference-aware and reference-free
 
 ### Models Evaluated
 
-- Gemini-2.0-Flash-Live
-- GPT-4o-Realtime
-- Qwen2.5-Omni (and variants)
+- Gemini-Flash-Live series models (2.5 and 3.1)
+- GPT-Realtime series models (4o, 1.5, etc.)
+- Qwen3-Omni-30B-A3B
 - *(+ cascade baselines)*
 
 ---
 
-## Results Summary
+## Key Results Summary
 
 | Model | Confetti (Accuracy) | When2Call (F1) |
 |-------|-------------------|----------------|
-| Gemini-2.0-Flash-Live | **70.4** | — |
-| GPT-4o-Realtime | — | **71.9** |
+| Gemini-3.1-Flash-Live | **70.4** | 63.4 |
+| GPT-Realtime-1.5 | 59.2 | **71.9** |
+| Qwen3-Omni-30B-A3B | 60.4 | 60.4 |
 
 Model rankings shift between benchmarks, confirming task-dependent performance. The text-to-voice gap varies substantially by model, indicating that voice robustness is a model-specific property.
 
