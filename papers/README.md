@@ -1,7 +1,3 @@
-# NLP Publications
-
-📊 **Paper Submissions with Travel Plans:** [Google Sheet](https://docs.google.com/spreadsheets/d/1wC07BGEMeQhwQ4gYbDZG20nXfyVx9huNXT0rAqWDOxg/edit?gid=0#gid=0)
-
 ## Conference Publications
 
 ### 2026
