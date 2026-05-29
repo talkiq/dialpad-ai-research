@@ -10,7 +10,7 @@
 1. [How Accurate Are LLMs at Multi-Question Answering on Conversational Transcripts?](https://aclanthology.org/2025.emnlp-industry.129.pdf) — *[EMNLP 2025 Industry Track](https://2025.emnlp.org/calls/industry_track/)*
 2. [DACP: Domain-Adaptive Continual Pre-Training of Large Language Models for Phone Conversation Summarization](https://aclanthology.org/2025.newsum-main.7.pdf) — *[EMNLP 2025 NewSumm Workshop](https://newsumm.github.io/2025/)*
 3. [DACIP-RC: Domain Adaptive Continual Instruction Pre-Training via Reading Comprehension on Business Conversations](https://aclanthology.org/2025.emnlp-industry.131.pdf) — *[EMNLP 2025 Industry Track](https://2025.emnlp.org/calls/industry_track/)*
-4. [LLM Evaluate: An Industry-Focused Evaluation Tool for Large Language Models](https://aclanthology.org/2025.coling-industry.24/) — *[COLING 2025 Industry Track](https://2024.emnlp.org/calls/industry_track/)*
+4. [LLM Evaluate: An Industry-Focused Evaluation Tool for Large Language Models](https://aclanthology.org/2025.coling-industry.24/) — *[COLING 2025 Industry Track](https://coling2025.org/calls/industry_track/)*
 5. [Can Post-Training Quantization Benefit from an Additional QLoRA Integration?](https://arxiv.org/abs/2502.10202) — *[NAACL 2025 Industry Track](https://2025.naacl.org/)*
 6. [AI Knowledge Assist: An Automated Approach for the Creation of Knowledge Bases for Conversational AI Agents](https://aclanthology.org/2025.emnlp-industry.130.pdf) — *[EMNLP 2025 Industry Track](https://2025.emnlp.org/calls/industry_track/)*
 
