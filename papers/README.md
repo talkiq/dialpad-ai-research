@@ -45,7 +45,4 @@
 
 1. [Improving Punctuation Restoration for Speech Transcripts via External Data](https://aclanthology.org/2021.wnut-1.19/) — *[W-NUT @ EMNLP 2021](http://noisy-text.github.io/2021/)*
 
-## Under Review / Manuscript Prepared
-
-*Coming soon.*
 
