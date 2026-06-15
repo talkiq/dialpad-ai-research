@@ -3,7 +3,7 @@
 ### 2026
 
 1. [From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents](https://arxiv.org/abs/2605.15104) — *ArXiv*
-2. [Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs](https://arxiv.org/abs/2605.21027) — *ArXiv*
+2. [Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs](https://arxiv.org/abs/2605.21027) — *[KDD 2026 Workshop on Enterprise AI Agents: From Prototypes to Production](https://sites.google.com/view/kdd-2026-workshop-ai-agents/home)*
 
 ### 2025
 
