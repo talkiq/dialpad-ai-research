@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.venv*/
+venv/
+
+# Local tooling / editors
+.claude/
+.idea/
+.vscode/
+.DS_Store
+
+# Audio — never committed; regenerate with scripts/audio_generation/
+*.wav
+*.mp3
+*.flac
+data/*/audio/
+data/*/audio_noisy/
+data/*/audio_sample/
+
+# Generated artifacts (regenerate with the pipeline scripts)
+model_responses/
+scripts/evaluation/ast_eval_results_*.csv
+scripts/evaluation/when2call_parsed_accuracy.csv
+scripts/audio_generation/GPT-4o-Mini-STT-*.csv
+scripts/inference/cascade_asr/GPT-4o-Mini-STT-*.csv
+
+# Large checkpoints (download separately; see scripts/evaluation/README.md)
+*.ckpt

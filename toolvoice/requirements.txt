@@ -1,0 +1,33 @@
+# Core (data handling + evaluation)
+pandas
+numpy
+
+# Audio generation / processing
+soundfile
+openai>=1.40                 # OpenAI TTS, gpt-4o-mini-transcribe ASR, and the vLLM-server client
+google-cloud-texttospeech    # Gemini TTS (auth via `gcloud auth application-default login`)
+
+# Realtime / live inference
+websockets                   # OpenAI Realtime API (openai_realtime_infer.py)
+google-genai                 # Gemini Live API (gemini_live_infer.py)
+
+# Local open-model inference (only needed for qwen_omni_infer.py / vllm_omni_infer.py)
+# torch and vllm build against a specific CUDA version — install the pair that matches
+# your driver from https://docs.vllm.ai/en/latest/getting_started/installation before
+# adding the audio extra below.
+# vllm[audio]
+# transformers
+# accelerate
+# qwen-omni-utils
+# huggingface_hub
+
+# AST Soft scoring for evaluate_confetti.py (the default; pass --binary to skip this).
+# AlignScore is not on PyPI — install from source and fetch its supporting data:
+#   pip install git+https://github.com/yuh-zha/AlignScore.git
+#   python -m spacy download en_core_web_sm
+#   python -m nltk.downloader punkt_tab
+# The AlignScore-base.ckpt checkpoint (~1.8GB) downloads automatically on first run
+# from https://huggingface.co/yzha/AlignScore/resolve/main/AlignScore-base.ckpt.
+# alignscore
+# spacy
+# nltk
