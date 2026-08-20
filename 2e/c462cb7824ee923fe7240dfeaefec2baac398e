@@ -1,0 +1,61 @@
+toolvoice/scripts/inference/cascade_asr/enrich_asr_csvs.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-74
+toolvoice/requirements.txt
+  s_dce0d16e164911::t_dd5a26e7829059 1-33
+toolvoice/scripts/inference/cascade_asr/asr_cascade_qwen_confetti.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-163
+toolvoice/scripts/inference/vllm_omni_infer.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-120
+toolvoice/.gitignore
+  s_dce0d16e164911::t_dd5a26e7829059 1-31
+toolvoice/data/confetti/confetti_benchmark.csv
+  s_dce0d16e164911::t_5fbf415ab56ae3 1-314
+toolvoice/scripts/inference/cascade_asr/asr_cascade_gemini_confetti.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-378
+toolvoice/scripts/inference/gemini_live_infer.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-351
+toolvoice/README.md
+  s_dce0d16e164911::t_dd5a26e7829059 24,27,29,33-48,65,73-83,85,87,89,93,95-96,100,109-110,112-116,137
+toolvoice/scripts/inference/cascade_asr/asr_cascade_openai_confetti.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-453
+toolvoice/scripts/inference/openai_realtime_infer.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-386
+toolvoice/scripts/inference/cascade_asr/README.md
+  s_dce0d16e164911::t_dd5a26e7829059 1-51
+toolvoice/data/README.md
+  s_dce0d16e164911::t_dd5a26e7829059 1-16
+toolvoice/LICENSE
+  s_dce0d16e164911::t_dd5a26e7829059 1-27
+toolvoice/scripts/evaluation/evaluate_when2call.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-452
+toolvoice/scripts/inference/vllm_nemotron_infer.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-116
+toolvoice/scripts/evaluation/evaluate_confetti.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-998
+toolvoice/scripts/evaluation/README.md
+  s_dce0d16e164911::t_dd5a26e7829059 1-32
+toolvoice/scripts/audio_generation/transcribe_audio.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-369
+toolvoice/scripts/audio_generation/generate_tts_audio.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-107
+toolvoice/scripts/inference/qwen_omni_infer.py
+  s_dce0d16e164911::t_dd5a26e7829059 1-190
+toolvoice/data/when2call/when2call_benchmark.csv
+  s_dce0d16e164911::t_dd5a26e7829059 1-327
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "2ec462cb7824ee923fe7240dfeaefec2baac398e",
+  "prompts": {},
+  "sessions": {
+    "s_dce0d16e164911": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "84a5b521-7aa5-4793-bcad-e3579b4b797b",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "tahmiddialpad <tahmid.rahman@dialpad.com>"
+    }
+  }
+}
