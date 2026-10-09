@@ -1,0 +1,13 @@
+# Core (all modules)
+numpy>=1.24,<3
+pandas>=2.0,<4
+scipy>=1.10,<2
+scikit-learn>=1.3,<2
+statsmodels>=0.14,<0.16
+
+# Text encoder used in the paper (all-MiniLM-L6-v2). Optional: without it the demo falls back to a
+# hashed bag-of-words encoder (csat_blowup/embeddings.py).
+sentence-transformers>=2.2,<7
+
+# Tests
+pytest>=7,<10
