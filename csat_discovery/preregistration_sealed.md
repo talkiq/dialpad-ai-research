@@ -24,7 +24,7 @@ Each test is run **once** on Sealed, with the code, model weights, lexicons, lab
 
 "Initial response" means the agent's next two turns after the customer's first blow-up.
 
-### Primary tests (eight)
+### Tests (11, equal standing)
 
 | # | Claim | Estimate | Confirmed if |
 |---|---|---|---|
@@ -35,22 +35,17 @@ Each test is run **once** on Sealed, with the code, model weights, lexicons, lab
 | S4 | Arguing with a manager request goes with more low ratings | Agent argues with or refuses an explicit request for a manager, vs does not address it; within company, controlling for duration and blow-up count and severity | Coefficient > 0, CI excludes 0 |
 | S5 | A concrete fix in the initial response goes with fewer low ratings | LLM-coded concrete fix in the initial response, net of coded understanding, matched design | Coefficient < 0, CI excludes 0 |
 | S6 | Customers who warm up give fewer low ratings when nothing can be fixed | Customer "sweetened" (turned genuinely warm) vs not, among emotional calls coded as not fixable, matched design | Coefficient < 0, CI excludes 0 |
+| S7 | Reassurance goes with more acceptance of the outcome | Reassurance phrases → LLM-coded acceptance, matched design | Coefficient > 0, CI excludes 0 |
+| S8 | Validation that first appears only after a refusal goes with less acceptance | Validation-timing phrases → acceptance, matched design | Coefficient < 0, CI excludes 0 |
+| S9 | At least one helpful action goes with fewer low ratings | Helpful-action phrases, within company, vs none | Coefficient < 0, CI excludes 0 |
 | S10 | Among upset customers, a deflated voice goes with worse ratings | Speaking (articulation) rate, voiced fraction and breathiness (H1–H2) at the upset turn relative to the speaker's own baseline; low (1–2 star) minus 5-star raters, in calm-call SD units, company-cluster bootstrap | Articulation rate lower in low raters with CI excluding 0 (the other two measures reported) |
-
-### Secondary tests (run once, reported in full, not headline)
-
-| # | Claim | Expected sign |
-|---|---|---|
-| S7 | Reassurance goes with more acceptance of the outcome (matched) | > 0 |
-| S8 | Validation that first appears only after a refusal goes with less acceptance (matched) | < 0 |
-| S9 | At least one helpful action goes with fewer low ratings (within company, vs none) | < 0 |
 
 Outcome categories:
 - **confirmed:** sign as stated and CI excludes 0;
 - **weakened:** sign as stated, CI includes 0;
 - **not confirmed:** opposite sign.
 
-**Multiplicity:** each primary test is judged on its own criterion. As a sensitivity analysis we also report which primaries survive Holm–Bonferroni at familywise α = 0.05.
+**Multiplicity:** all 11 tests have equal standing and each is judged on its own criterion. As a sensitivity analysis we also report which of the 11 survive Holm–Bonferroni at familywise α = 0.05.
 
 ### Frozen artifacts
 
@@ -61,6 +56,6 @@ Outcome categories:
 
 ## 3. Reporting commitments
 
-- All eight primary results are reported in the manuscript's abstract ("k of 8 confirmed on held-out companies") and main tables, and all secondary results in the supplement, whatever they show.
+- All 11 results are reported, whatever they show: in the manuscript's abstract ("k of 11 confirmed on held-out companies") and in a Sealed column of the main or supplementary tables.
 - No test is re-run, re-specified or dropped after Sealed data are touched. If a test cannot be run (for example, too few eligible calls or too little audio), it is reported as "not run" with the reason.
 - Any deviation from this document is listed explicitly in the manuscript.
