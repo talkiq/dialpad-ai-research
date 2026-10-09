@@ -17,24 +17,50 @@ All findings in the manuscript come from Explore and Confirm: 345,609 and 557,41
 
 ## 2. Tests
 
-Each test is run **once** on Sealed, with the code, model weights, lexicons, label rubrics and specifications frozen as used on Explore/Confirm. Code for the methods is in [`code/`](code/).
+Each test is run **once** on Sealed, with the code, model weights, lexicons, label rubrics and specifications frozen as used on Explore/Confirm. Code for the methods is in [`code/`](code/). "Matched design" means:
+- 10 nearest neighbors within vertical on the customer's upset-turn embedding;
+- neighborhood fixed effects and an out-of-fold customer-risk score;
+- company-cluster bootstrap 95% CIs.
+
+"Initial response" means the agent's next two turns after the customer's first blow-up.
+
+### Primary tests (eight)
 
 | # | Claim | Estimate | Confirmed if |
 |---|---|---|---|
-| S1 | A late blow-up predicts a low rating | Last vs first fifth of the call (by share of turns elapsed) in which the first blow-up occurs. Within-company linear probability model with duration, number of legs, hour, weekday and blow-up severity; company-clustered SEs. The within-company logit per SD of position is reported alongside | Difference > 0 and its 95% CI excludes 0 |
-| S2 | The agent's initial response predicts the ending in unseen companies | The logistic model trained on Explore initial-response embeddings (the agent's next two turns after the first blow-up), applied unchanged; calls sorted into fifths of predicted risk | AUC > 0.5 beyond a permutation null (p < 0.05); fifths reported |
-| S3 | Agent listening signals go with fewer low ratings | Agent backchannel rate after the blow-up, per SD. Matched design: 10 nearest neighbors within vertical on the customer's upset-turn embedding, neighborhood fixed effects, out-of-fold customer-risk score, company-cluster bootstrap CI | Coefficient < 0 and CI excludes 0 |
-| S4 | Arguing with a manager request goes with more low ratings | Agent argues with or refuses a customer's explicit request for a manager, vs does not address it. Within company, controlling for duration and blow-up count and severity | Coefficient > 0 and CI excludes 0 |
-| S5 | Customers who warm up give fewer low ratings when nothing can be fixed | Customer "sweetened" (turned genuinely warm) vs not, among emotional calls judged not fixable (frozen LLM rubric); matched design as in S3 | Coefficient < 0 and CI excludes 0 |
+| S1 | A late blow-up predicts a low rating | Last vs first fifth of the call in which the first blow-up occurs. Within-company linear probability model with duration, number of legs, hour, weekday and blow-up severity; company-clustered SEs. Within-company logit per SD of position reported alongside | Difference > 0, CI excludes 0 |
+| S2a | The initial response predicts the ending in unseen companies | Logistic model trained on Explore initial-response embeddings, applied unchanged; fifths of predicted risk | AUC > 0.5 beyond a permutation null (p < 0.05) |
+| S2b | The agent's wording adds signal beyond the customer's words | Explore-trained models on the customer's upset turn alone vs customer + agent initial response, both applied unchanged; difference in AUC, company-cluster bootstrap | ΔAUC > 0, CI excludes 0 |
+| S3 | Agent listening signals go with fewer low ratings | Agent backchannel rate after the blow-up, per SD, matched design | Coefficient < 0, CI excludes 0 |
+| S4 | Arguing with a manager request goes with more low ratings | Agent argues with or refuses an explicit request for a manager, vs does not address it; within company, controlling for duration and blow-up count and severity | Coefficient > 0, CI excludes 0 |
+| S5 | A concrete fix in the initial response goes with fewer low ratings | LLM-coded concrete fix in the initial response, net of coded understanding, matched design | Coefficient < 0, CI excludes 0 |
+| S6 | Customers who warm up give fewer low ratings when nothing can be fixed | Customer "sweetened" (turned genuinely warm) vs not, among emotional calls coded as not fixable, matched design | Coefficient < 0, CI excludes 0 |
+| S10 | Among upset customers, a deflated voice goes with worse ratings | Speaking (articulation) rate, voiced fraction and breathiness (H1–H2) at the upset turn relative to the speaker's own baseline; low (1–2 star) minus 5-star raters, in calm-call SD units, company-cluster bootstrap | Articulation rate lower in low raters with CI excluding 0 (the other two measures reported) |
 
-Secondary, reported but not headline:
-- the agent's increment in AUC over a customer-only classifier;
-- a concrete fix in the initial response (matched design).
+### Secondary tests (run once, reported in full, not headline)
 
-Outcome categories: **confirmed** (sign as stated, CI excludes 0); **weakened** (sign as stated, CI includes 0); **not confirmed** (opposite sign).
+| # | Claim | Expected sign |
+|---|---|---|
+| S7 | Reassurance goes with more acceptance of the outcome (matched) | > 0 |
+| S8 | Validation that first appears only after a refusal goes with less acceptance (matched) | < 0 |
+| S9 | At least one helpful action goes with fewer low ratings (within company, vs none) | < 0 |
+
+Outcome categories:
+- **confirmed:** sign as stated and CI excludes 0;
+- **weakened:** sign as stated, CI includes 0;
+- **not confirmed:** opposite sign.
+
+**Multiplicity:** each primary test is judged on its own criterion. As a sensitivity analysis we also report which primaries survive Holm–Bonferroni at familywise α = 0.05.
+
+### Frozen artifacts
+
+- **Text labels (S5–S8):** produced by the same LLM (`claude-sonnet-5`) and frozen rubrics as on Explore/Confirm. The rubrics will be published with the paper; their SHA-256 hashes are: distress rubric `89b95db4d35af6b101a192a79c3f1e6bd4d867921917c4f65eea92e1bc00ad84`, trajectory/acceptance rubric `6ab67196a4e0f6b5d20faaa4c9011bedf6d7612681784b8380bd5b1c2ded14c0`.
+- **Embeddings:** `sentence-transformers/all-MiniLM-L6-v2`.
+- **Explore-trained classifiers (S2a, S2b):** refit deterministically with the original seed; the hash of their coefficients is committed to this repository before any Sealed scoring.
+- **Random seeds:** fixed for all samples, bootstraps and permutations.
 
 ## 3. Reporting commitments
 
-- All five results are reported in the manuscript's abstract and main tables, whatever they show.
-- No test is re-run, re-specified or dropped after Sealed data are touched. If a test cannot be run (for example, too few eligible calls for S5), it is reported as "not run" with the reason.
+- All eight primary results are reported in the manuscript's abstract ("k of 8 confirmed on held-out companies") and main tables, and all secondary results in the supplement, whatever they show.
+- No test is re-run, re-specified or dropped after Sealed data are touched. If a test cannot be run (for example, too few eligible calls or too little audio), it is reported as "not run" with the reason.
 - Any deviation from this document is listed explicitly in the manuscript.
