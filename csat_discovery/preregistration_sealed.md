@@ -1,7 +1,7 @@
 # Pre-registration: held-out ("Sealed") confirmation of the headline findings
 
 **Paper:** *What to Say After a Blow-Up: Satisfaction and Agent Behavior in Transcribed Support Calls* (manuscript in preparation).
-**Status:** DRAFT, not yet frozen. This file is frozen by the commit and release tag that remove this status line. No Sealed outcome has been computed at any point before that.
+**Status:** FROZEN on 2026-10-14 (approved by the authors). No Sealed outcome had been computed when this version was committed. SHA-256 of the internal analysis specification this mirrors: `6073a7f8e416efb8bede351e5324849380355ac13cfc32fa292416af717222dd`. Test runner SHA-256: `8497ceb2513b52b9f182ca7db2bc93c9104358c02db6e3391b3e016ed36c46a9`.
 
 ## 1. Background and design
 
