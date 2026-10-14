@@ -24,7 +24,7 @@ Each test is run **once** on Sealed, with the code, model weights, lexicons, lab
 
 "Initial response" means the agent's next two turns after the customer's first blow-up.
 
-### Tests (11, equal standing)
+### Tests (12, equal standing)
 
 | # | Claim | Estimate | Confirmed if |
 |---|---|---|---|
@@ -38,16 +38,17 @@ Each test is run **once** on Sealed, with the code, model weights, lexicons, lab
 | S7 | Reassurance goes with more acceptance of the outcome | Reassurance phrases → LLM-coded acceptance, matched design | Coefficient > 0, CI excludes 0 |
 | S8 | Validation that first appears only after a refusal goes with less acceptance | Validation-timing phrases → acceptance, matched design | Coefficient < 0, CI excludes 0 |
 | S9 | At least one helpful action goes with fewer low ratings | Helpful-action phrases; within-company model of low rating on ≥1 action vs none, percentage points, company-clustered CI | Coefficient < 0, CI excludes 0 |
-| S10 | Among upset customers, a deflated voice goes with worse ratings | Change at the upset turn relative to the speaker's own baseline turns, low (1–2 star) minus 5-star raters, in units of the Explore+Confirm calm-call SD (fixed), company-cluster bootstrap CI. Measures: speaking (articulation) rate, voiced fraction, breathiness (H1–H2) | Articulation rate lower in low raters, CI excludes 0 (the other two reported) |
+| S10a | Among upset customers, a breathier voice goes with worse ratings | Breathiness (H1–H2) change at the upset turn relative to the speaker's own earlier turns, low (1–2 star) minus 5-star raters, in units of the Explore+Confirm calm-call SD (fixed), company-cluster bootstrap CI; baseline-adjusted estimate reported alongside | Difference > 0, CI excludes 0 |
+| S10b | Among upset customers, more irregular pausing goes with worse ratings | Coefficient of variation of within-turn pause lengths (gaps ≥ 0.25 s between words, capped at 3 s), after-window (upset turn + up to 4 following customer turns) vs before-window (up to 5 earlier turns), ≥ 4 pauses per window; regression of after-window CV on low rating, before-window CV, speech time and company fixed effects; company-clustered CI. Found in exploratory analysis of the two open splits; this is its first independent test | Coefficient > 0, CI excludes 0 |
 
 Outcome categories:
 - **confirmed:** sign as stated and CI excludes 0;
 - **weakened:** sign as stated, CI includes 0;
 - **not confirmed:** opposite sign.
 
-**Multiplicity:** all 11 tests have equal standing and each is judged on its own criterion. As a sensitivity analysis we also report which of the 11 survive Holm–Bonferroni at familywise α = 0.05. The p-values used are two-sided bootstrap p for bootstrap-based tests, cluster-robust Wald p for S1 and S9, and the permutation p for S2a. Both the per-test verdicts and the Holm results are reported.
+**Multiplicity:** all 12 tests have equal standing and each is judged on its own criterion. As a sensitivity analysis we also report which of the 12 survive Holm–Bonferroni at familywise α = 0.05. The p-values used are two-sided bootstrap p for bootstrap-based tests, cluster-robust Wald p for S1 and S9, and the permutation p for S2a. Both the per-test verdicts and the Holm results are reported.
 
-**Runner:** a single script computes all 11 estimates with fixed seeds per test. Run on the Confirm split, it reproduces every published Confirm estimate; it refuses to run on Sealed unless this document's frozen hash is supplied.
+**Runner:** a single script computes all 12 estimates with fixed seeds per test. Run on the Confirm split, it reproduces every published Confirm estimate; it refuses to run on Sealed unless this document's frozen hash is supplied.
 
 ### Frozen artifacts
 
@@ -61,6 +62,6 @@ Outcome categories:
 
 ## 3. Reporting commitments
 
-- All 11 results are reported, whatever they show: in the manuscript's abstract ("k of 11 confirmed on held-out companies") and in a Sealed column of the main or supplementary tables.
+- All 12 results are reported, whatever they show: in the manuscript's abstract ("k of 12 confirmed on held-out companies") and in a Sealed column of the main or supplementary tables.
 - No test is re-run, re-specified or dropped after Sealed data are touched. If a test cannot be run (for example, too few eligible calls or too little audio), it is reported as "not run" with the reason.
 - Any deviation from this document is listed explicitly in the manuscript.
