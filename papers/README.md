@@ -2,8 +2,15 @@
 
 ### 2026
 
-1. [From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents](https://arxiv.org/abs/2605.15104) — *ArXiv*
+1. [From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents](https://arxiv.org/abs/2605.15104) — *[Transactions on Machine Learning Research (TMLR)](https://jmlr.org/tmlr/)*
 2. [Beyond Text-to-SQL: An Agentic LLM System for Governed Enterprise Analytics APIs](https://arxiv.org/abs/2605.21027) — *[KDD 2026 Workshop on Enterprise AI Agents: From Prototypes to Production](https://sites.google.com/view/kdd-2026-workshop-ai-agents/home)*
+3. [SFT or RL for Tool-Calling Agents? A Controlled Study Across Data, Method, and Scale](https://arxiv.org/abs/2609.17848) — *[REALM Workshop @ EMNLP 2026](https://realm-workshop.github.io/)* · Also accepted at *[SLM-Agents Workshop @ NeurIPS 2026](https://slmw2026.github.io/)* and *[Transitioning from Pre-Training to Post-Training Workshop @ NeurIPS 2026](https://pretrain2posttrain.github.io/)*
+4. [When Better Turns Do Not Make Better Agents: Diagnosing the Gap Between Next-Turn Metrics and Workflow Success](https://arxiv.org/abs/2609.21187) — *[REALM Workshop @ EMNLP 2026](https://realm-workshop.github.io/)*
+5. [Topic Matching in the Wild: Benchmark and Lessons from Real-World ASR Transcripts](https://arxiv.org/abs/2609.00330) — *[W-NUT @ EMNLP 2026](https://noisy-text.github.io/2026/)* (Oral Presentation)
+6. [Evaluating LLMs as Agentic Workflow Executors in Real-World Customer Support Skills](https://arxiv.org/abs/2610.14346) — *[SLM-Agents Workshop @ NeurIPS 2026](https://slmw2026.github.io/)*
+7. [Can One Adapted Model Do It All? Fine-Tuning Strategy Selection for Customer Support LLMs](https://arxiv.org/abs/2609.27262) — *ArXiv*
+8. [Prompts versus Rules: Auditing and Controlling Speech Naturalness Behaviors in Voice User Simulators](https://arxiv.org/abs/2610.11015) — *[UserSim Workshop @ NeurIPS 2026](https://usersim-workshop.github.io/)*
+9. [Back in Style: A Sociolinguistic Approach to Authoring and Measuring Persona Fidelity in User Simulation](https://arxiv.org/abs/2610.10988) — *[UserSim Workshop @ NeurIPS 2026](https://usersim-workshop.github.io/)*
 
 ### 2025
 
