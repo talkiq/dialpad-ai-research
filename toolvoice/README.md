@@ -1,6 +1,8 @@
 # From Text to Voice: A Reproducible and Verifiable Framework for Evaluating Tool Calling LLM Agents
 
-**Paper:** [arXiv:2605.15104](https://arxiv.org/abs/2605.15104)
+**Paper:** [arXiv:2605.15104](https://arxiv.org/abs/2605.15104) 
+
+*Accepted to Transactions on Machine Learning Research (TMLR)*
 
 **Authors:** Md Tahmid Rahman Laskar, Xue-Yong Fu, Seyyed Saeed Sarfjoo, Quinten McNamara, Jonas Robertson, Shashi Bhushan TN
 
